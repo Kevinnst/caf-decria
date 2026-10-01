@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos | Café de Cria</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+ 
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="static/img/logo.png" alt="Café de Cria">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="cardapio.html" class="nav-link">Cardápio</a></li>
+          <li><a href="pedidos.html" class="nav-link active">Pedidos</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+   
+    <section class="page-header">
+      <h1 class="page-title">Faça seu pedido</h1>
+      <p class="page-subtitle">Monte seu pedido escolhendo os itens do cardápio</p>
+    </section>
+
+    
+    <section class="pedido-container">
+
+      <div class="pedido-form-box">
+        <h2 class="section-title-left">Adicionar item</h2>
+
+        <form id="formPedido" class="pedido-form">
+          <label for="produto">Produto</label>
+          <select id="produto" required>
+            <option value="" disabled selected>Escolha um produto</option>
+            <option value="Espresso" data-preco="6.50">Espresso — R$ 6,50</option>
+            <option value="Café Americano" data-preco="7.00">Café Americano — R$ 7,00</option>
+            <option value="Cappuccino" data-preco="9.90">Cappuccino — R$ 9,90</option>
+            <option value="Café com Leite" data-preco="8.00">Café com Leite — R$ 8,00</option>
+            <option value="Iced Coffee" data-preco="10.00">Iced Coffee — R$ 10,00</option>
+            <option value="Cold Brew" data-preco="12.00">Cold Brew — R$ 12,00</option>
+            <option value="Cappuccino Gelado" data-preco="11.00">Cappuccino Gelado — R$ 11,00</option>
+            <option value="Brownie" data-preco="9.00">Brownie — R$ 9,00</option>
+            <option value="Cookie" data-preco="7.50">Cookie — R$ 7,50</option>
+            <option value="Bolo de Chocolate" data-preco="10.50">Bolo de Chocolate — R$ 10,50</option>
+            <option value="Croissant" data-preco="8.50">Croissant — R$ 8,50</option>
+            <option value="Pão de Queijo" data-preco="6.00">Pão de Queijo — R$ 6,00</option>
+            <option value="Sanduíche" data-preco="14.00">Sanduíche — R$ 14,00</option>
+          </select>
+
+          <label for="quantidade">Quantidade</label>
+          <input type="number" id="quantidade" min="1" value="1" required>
+
+          <label for="observacao">Observação (opcional)</label>
+          <textarea id="observacao" rows="3" placeholder="Ex: sem açúcar, pouco gelo..."></textarea>
+
+          <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+      </div>
+
+      <div class="pedido-resumo-box">
+        <h2 class="section-title-left">Resumo do pedido</h2>
+
+        <ul id="listaPedido" class="lista-pedido">
+          <li class="pedido-vazio">Seu pedido está vazio. Adicione um item ao lado.</li>
+        </ul>
+
+        <div class="pedido-total">
+          <span>Total</span>
+          <span id="totalPedido">R$ 0,00</span>
+        </div>
+
+        <button id="btnFinalizar" class="btn btn-primary btn-finalizar">Finalizar pedido</button>
+        <p id="mensagemPedido" class="mensagem-pedido"></p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="static/img/logo.png" alt="Café de Cria" class="footer-logo">
+        <p class="footer-name">Café de Cria</p>
+        <p class="footer-slogan">Um bom café, uma boa conversa e bons momentos.</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-copy">&copy; 2026 Café de Cria. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

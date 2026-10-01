@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio | Café de Cria</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/js/script.js" >
+</head>
+
+<body>
+
+
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="static/img/logo.png" alt="Café de Cria">
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="cardapio.html" class="nav-link active">Cardápio</a></li>
+          <li><a href="pedidos.html" class="nav-link">Pedidos</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+
+    <section class="page-header">
+      <h1 class="page-title">Nosso Cardápio</h1>
+      <p class="page-subtitle">Cafés, doces e salgados feitos para acompanhar sua vibe</p>
+    </section>
+
+    <!-- ===================== CAFÉS ===================== -->
+    <section class="menu-categoria">
+      <h2 class="section-title">Cafés</h2>
+
+      <div class="cards-container">
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe1.png" alt="Espresso"></div>
+          <div class="card-body">
+            <h3 class="card-title">Espresso</h3>
+            <p class="card-description">Café puro, encorpado e intenso, extraído na hora.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 6,50</span>
+              <button class="btn btn-card btn-add" data-nome="Espresso" data-preco="6.50">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe4.png" alt="Café Americano"></div>
+          <div class="card-body">
+            <h3 class="card-title">Café Americano</h3>
+            <p class="card-description">Espresso diluído em água quente, leve e suave.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 7,00</span>
+              <button class="btn btn-card btn-add" data-nome="Café Americano" data-preco="7.00">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe2.png" alt="Cappuccino"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cappuccino</h3>
+            <p class="card-description">Café, leite vaporizado e espuma cremosa com cacau.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 9,90</span>
+              <button class="btn btn-card btn-add" data-nome="Cappuccino" data-preco="9.90">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe5.png" alt="Café com Leite"></div>
+          <div class="card-body">
+            <h3 class="card-title">Café com Leite</h3>
+            <p class="card-description">Clássico equilíbrio entre café forte e leite quente.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 8,00</span>
+              <button class="btn btn-card btn-add" data-nome="Café com Leite" data-preco="8.00">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="menu-categoria menu-categoria-alt">
+      <h2 class="section-title">Cafés Gelados</h2>
+
+      <div class="cards-container">
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe3.png" alt="Iced Coffee"></div>
+          <div class="card-body">
+            <h3 class="card-title">Café Gelado</h3>
+            <p class="card-description">Café gelado, refrescante e suave, servido com gelo.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 10,00</span>
+              <button class="btn btn-card btn-add" data-nome="Café Gelado" data-preco="10.00">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe6.png" alt="Cold Brew"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cold Brew</h3>
+            <p class="card-description">Extração lenta a frio, sabor suave e pouco ácido.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 12,00</span>
+              <button class="btn btn-card btn-add" data-nome="Cold Brew" data-preco="12.00">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cafe7.png" alt="Cappuccino Gelado"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cappuccino Gelado</h3>
+            <p class="card-description">Cremoso, gelado e com aquele toque de cacau por cima.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 11,00</span>
+              <button class="btn btn-card btn-add" data-nome="Cappuccino Gelado" data-preco="11.00">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="menu-categoria">
+      <h2 class="section-title">Doces</h2>
+
+      <div class="cards-container">
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/brownie.png" alt="Brownie"></div>
+          <div class="card-body">
+            <h3 class="card-title">Brownie</h3>
+            <p class="card-description">Denso, achocolatado e com pedaços de chocolate.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 9,00</span>
+              <button class="btn btn-card btn-add" data-nome="Brownie" data-preco="9.00">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/cookie.png" alt="Cookie"></div>
+          <div class="card-body">
+            <h3 class="card-title">Cookie</h3>
+            <p class="card-description">Crocante por fora, macio por dentro, com gotas de chocolate.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 7,50</span>
+              <button class="btn btn-card btn-add" data-nome="Cookie" data-preco="7.50">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/bolo.png" alt="Bolo de Chocolate"></div>
+          <div class="card-body">
+            <h3 class="card-title">Bolo de Chocolate</h3>
+            <p class="card-description">Fatia generosa, fofinha e com cobertura de chocolate.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 10,50</span>
+              <button class="btn btn-card btn-add" data-nome="Bolo de Chocolate" data-preco="10.50">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <section class="menu-categoria menu-categoria-alt">
+      <h2 class="section-title">Salgados</h2>
+
+      <div class="cards-container">
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/croi.png" alt="Croissant"></div>
+          <div class="card-body">
+            <h3 class="card-title">Croissant</h3>
+            <p class="card-description">Amanteigado e crocante, feito fresquinho todos os dias.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 8,50</span>
+              <button class="btn btn-card btn-add" data-nome="Croissant" data-preco="8.50">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/pao.png" alt="Pão de Queijo"></div>
+          <div class="card-body">
+            <h3 class="card-title">Pão de Queijo</h3>
+            <p class="card-description">Quentinho, macio por dentro e com boa quantidade de queijo.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 6,00</span>
+              <button class="btn btn-card btn-add" data-nome="Pão de Queijo" data-preco="6.00">Adicionar ao
+                pedido</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image"><img src="static/img/sanduiche.png" alt="Sanduíche"></div>
+          <div class="card-body">
+            <h3 class="card-title">Sanduíche</h3>
+            <p class="card-description">Pão artesanal, queijo, frios e um toque especial da casa.</p>
+            <div class="card-footer">
+              <span class="card-price">R$ 14,00</span>
+              <button class="btn btn-card btn-add" data-nome="Sanduíche" data-preco="14.00">Adicionar ao pedido</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="static/img/logo.png" alt="Café de Cria" class="footer-logo">
+        <p class="footer-name">Café de Cria</p>
+        <p class="footer-slogan">Um bom café, uma boa conversa e bons momentos.</p>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cardapio.html">Cardápio</a></li>
+        <li><a href="pedidos.html">Pedidos</a></li>
+        <li><a href="sobre.html">Sobre nós</a></li>
+      </ul>
+    </div>
+
+    <p class="footer-copy">&copy; 2026 Café de Cria. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
