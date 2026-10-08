@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos | Café de Cria</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!--  HEADER  -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="static/img/logo.png" alt="Café de Cria">
+      </a>
+      <h2 class="site_title">Café de Cria</h2>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="produtos.html" class="nav-link active">Produtos</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre nós</a></li>
+          <li><a href="carrinho.html" class="nav-link">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!--  CABEÇALHO DA PÁGINA  -->
+    <section class="page-header" style="background-image: url('static/img/cafeteria3.png');">
+      <h1 class="page-title">Faça seu pedido</h1>
+      <p class="page-subtitle">Escolha os itens, confira o resumo e finalize em poucos passos</p>
+    </section>
+
+    <!--  LAYOUT PRINCIPAL  -->
+    <section class="pedidos-layout">
+
+      <!--  CATÁLOGO  -->
+      <div class="pedidos-catalogo">
+
+        <div class="categoria-tabs" id="categoriaTabs">
+          <button class="tab-categoria ativo" data-categoria="todos">Todos</button>
+          <button class="tab-categoria" data-categoria="cafes">Cafés</button>
+          <button class="tab-categoria" data-categoria="gelados">Gelados</button>
+          <button class="tab-categoria" data-categoria="doces">Doces</button>
+          <button class="tab-categoria" data-categoria="salgados">Salgados</button>
+          <button class="tab-categoria" data-categoria="Outros">Outros</button>
+        </div>
+
+        <div class="produtos-grid" id="produtosGrid">
+
+          <!-- Cafés -->
+          <article class="produto-card" data-categoria="cafes">
+            <div class="produto-imagem"><img src="static/img/cafe1.png" alt="Espresso"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Espresso</h3>
+              <p class="produto-descricao">Café puro, encorpado e intenso.</p>
+              <span class="produto-preco">R$ 6,50</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Espresso" data-preco="6.50" data-img="img/cafe1.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="cafes">
+            <div class="produto-imagem"><img src="static/img/cafe4.png" alt="Café Americano"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Café Americano</h3>
+              <p class="produto-descricao">Espresso diluído em água quente, leve e suave.</p>
+              <span class="produto-preco">R$ 7,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Café Americano" data-preco="7.00" data-img="img/cafe1.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="cafes">
+            <div class="produto-imagem"><img src="static/img/cafe2.png" alt="Cappuccino"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Cappuccino</h3>
+              <p class="produto-descricao">Café, leite vaporizado e espuma cremosa com cacau.</p>
+              <span class="produto-preco">R$ 9,90</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Cappuccino" data-preco="9.90" data-img="img/cafe2.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="cafes">
+            <div class="produto-imagem"><img src="static/img/cafe5.png" alt="Café com Leite"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Café com Leite</h3>
+              <p class="produto-descricao">Clássico equilíbrio entre café forte e leite quente.</p>
+              <span class="produto-preco">R$ 8,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Café com Leite" data-preco="8.00" data-img="img/cafe2.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <!-- Cafés Gelados -->
+          <article class="produto-card" data-categoria="gelados">
+            <div class="produto-imagem"><img src="static/img/cafe3.png" alt="Iced Coffee"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Iced Coffee</h3>
+              <p class="produto-descricao">Café gelado, refrescante e suave, servido com gelo.</p>
+              <span class="produto-preco">R$ 10,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Iced Coffee" data-preco="10.00" data-img="img/cafe3.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="gelados">
+            <div class="produto-imagem"><img src="static/img/cafe6.png" alt="Cold Brew"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Cold Brew</h3>
+              <p class="produto-descricao">Extração lenta a frio, sabor suave e pouco ácido.</p>
+              <span class="produto-preco">R$ 12,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Cold Brew" data-preco="12.00" data-img="img/cafe3.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="gelados">
+            <div class="produto-imagem"><img src="static/img/cafe7.png" alt="Cappuccino Gelado"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Cappuccino Gelado</h3>
+              <p class="produto-descricao">Cremoso, gelado e com um toque de cacau por cima.</p>
+              <span class="produto-preco">R$ 11,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Cappuccino Gelado" data-preco="11.00" data-img="img/cafe3.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="gelados">
+            <div class="produto-imagem"><img src="static/img/bubble.png" alt="Bubble Tea"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Bubble Tea</h3>
+              <p class="produto-descricao">Chá com bolinhas de tapioca, refrescante e saboroso.</p>
+              <span class="produto-preco">R$ 10,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Bubble Tea" data-preco="10.00" data-img="img/cafe7.png">Adicionar</button>
+            </div>
+          </article>
+
+          <!-- Doces -->
+          <article class="produto-card" data-categoria="doces">
+            <div class="produto-imagem"><img src="static/img/brownie.png" alt="Brownie"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Brownie</h3>
+              <p class="produto-descricao">Denso, achocolatado e com pedaços de chocolate.</p>
+              <span class="produto-preco">R$ 9,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Brownie" data-preco="9.00" data-img="img/cafe1.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="doces">
+            <div class="produto-imagem"><img src="static/img/cookie.png" alt="Cookie"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Cookie</h3>
+              <p class="produto-descricao">Crocante por fora, macio por dentro, com gotas de chocolate.</p>
+              <span class="produto-preco">R$ 7,50</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Cookie" data-preco="7.50" data-img="img/cafe2.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="doces">
+            <div class="produto-imagem"><img src="static/img/bolo.png" alt="Bolo de Chocolate"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Bolo de Chocolate</h3>
+              <p class="produto-descricao">Fatia generosa, fofinha e com cobertura de chocolate.</p>
+              <span class="produto-preco">R$ 10,50</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Bolo de Chocolate" data-preco="10.50" data-img="img/cafe3.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="doces">
+            <div class="produto-imagem"><img src="static/img/donuts.png" alt="Donuts"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Donuts</h3>
+              <p class="produto-descricao">Redondo, macio e coberto com açúcar ou calda.</p>
+              <span class="produto-preco">R$ 5,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Donuts" data-preco="5.00" data-img="img/donuts.png">Adicionar</button>
+            </div>
+          </article>
+
+          <!-- Salgados -->
+          <article class="produto-card" data-categoria="salgados">
+            <div class="produto-imagem"><img src="static/img/croi.png" alt="Croissant"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Croissant</h3>
+              <p class="produto-descricao">Amanteigado e crocante, feito fresquinho todos os dias.</p>
+              <span class="produto-preco">R$ 8,50</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Croissant" data-preco="8.50" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="salgados">
+            <div class="produto-imagem"><img src="static/img/pao.png" alt="Pão de Queijo"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Pão de Queijo</h3>
+              <p class="produto-descricao">Quentinho, macio por dentro e com boa quantidade de queijo.</p>
+              <span class="produto-preco">R$ 6,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Pão de Queijo" data-preco="6.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="salgados">
+            <div class="produto-imagem"><img src="static/img/sanduiche.png" alt="Sanduíche"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Sanduíche</h3>
+              <p class="produto-descricao">Pão artesanal, queijo, frios e um toque especial da casa.</p>
+              <span class="produto-preco">R$ 14,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Sanduíche" data-preco="14.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <article class="produto-card" data-categoria="salgados">
+            <div class="produto-imagem"><img src="static/img/misto.png" alt="Misto Quente"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Misto Quente</h3>
+              <p class="produto-descricao">Pão artesanal, queijo, frios e um toque especial da casa.</p>
+              <span class="produto-preco">R$ 12,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Misto Quente" data-preco="12.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+          <!-- Vendas -->
+           <article class="produto-card" data-categoria="Outros">
+            <div class="produto-imagem"><img src="static/img/moido.png" alt="Café Moido"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Café Moido</h3>
+              <p class="produto-descricao">Café moído na hora, perfeito para o seu café da manhã.</p>
+              <span class="produto-preco">R$ 14,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Café Moido" data-preco="14.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+           <article class="produto-card" data-categoria="Outros">
+            <div class="produto-imagem"><img src="static/img/graos2.png" alt="Grãos de Café"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Grãos de Café</h3>
+              <p class="produto-descricao">Café em grãos, perfeito para o seu dia.</p>
+              <span class="produto-preco">R$ 14,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Grãos de Café" data-preco="14.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+           <article class="produto-card" data-categoria="Outros">
+            <div class="produto-imagem"><img src="static/img/capsula.png" alt="Capsula de Café"></div>
+            <div class="produto-info">
+              <h3 class="produto-nome">Capsula de Café</h3>
+              <p class="produto-descricao">Café em cápsula, perfeito para o sua cafeteira.</p>
+              <span class="produto-preco">R$ 14,00</span>
+            </div>
+            <div class="produto-acoes">
+              <div class="qtd-stepper">
+                <button type="button" class="qtd-btn qtd-menos">−</button>
+                <input type="number" class="qtd-input" value="1" min="1">
+                <button type="button" class="qtd-btn qtd-mais">+</button>
+              </div>
+              <button class="btn btn-card btn-add" data-nome="Capsula de Café" data-preco="14.00" data-img="img/cafeteria.jpg">Adicionar</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+
+    </section>
+
+  </main>
+
+   <!--  FOOTER  -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <img src="static/img/logo.png" alt="Café de Cria" class="footer-logo">
+        <p class="footer-name">Café de Cria</p>
+        <p class="footer-slogan">Um bom café, uma boa conversa e bons momentos.</p>
+      </div>
+
+      <ul class="footer-links">
+        <img src="static/img/instagram.png" alt="Instagram" class="footer-icon">
+        <img src="static/img/facebook.png" alt="Facebook" class="footer-icon">
+        <img src="static/img/whatsapp.png" alt="WhatsApp" class="footer-icon">
+      </ul>
+    </div>
+
+    <p class="footer-copy">&copy; 2026 Café de Cria. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>

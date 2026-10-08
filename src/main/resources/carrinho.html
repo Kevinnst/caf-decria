@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrinho | Café de Cria</title>
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <img src="static/img/logo.png" alt="Café de Cria">
+      </a>
+
+      <h2 class="site_title">Café de Cria</h2>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="produtos.html" class="nav-link">Produtos</a></li>
+          <li><a href="sobre.html" class="nav-link">Sobre nós</a></li>
+          <li><a href="carrinho.html" class="nav-link active">Carrinho</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CABEÇALHO DA PÁGINA -->
+    <section
+      class="page-header"
+      style="background-image: url('static/img/cafeteria3.png');"
+    >
+      <h1 class="page-title">Seu carrinho</h1>
+      <p class="page-subtitle">
+        Confira seu pedido e finalize em poucos passos
+      </p>
+    </section>
+
+    <!-- CARRINHO -->
+    <section class="pedidos-layout carrinho-pagina">
+
+      <!-- CARRINHO -->
+      <aside class="pedidos-resumo">
+
+        <div class="resumo-box">
+          <h2 class="section-title-left">Seu pedido</h2>
+
+          <ul id="listaPedido" class="lista-pedido">
+            <li class="pedido-vazio">
+              Seu carrinho está vazio.
+            </li>
+          </ul>
+
+          <div class="resumo-linha">
+            <span>Subtotal</span>
+            <span id="subtotalPedido">R$ 0,00</span>
+          </div>
+
+          <div class="resumo-linha" id="linhaTaxa">
+            <span>Taxa de entrega</span>
+            <span id="taxaEntrega">R$ 0,00</span>
+          </div>
+
+          <div class="resumo-linha resumo-total">
+            <span>Total</span>
+            <span id="totalPedido">R$ 0,00</span>
+          </div>
+        </div>
+
+        <div class="cliente-box">
+          <h2 class="section-title-left">Seus dados</h2>
+
+          <form id="formCliente" class="cliente-form">
+
+            <label for="nomeCliente">Nome</label>
+            <input
+              type="text"
+              id="nomeCliente"
+              placeholder="Seu nome"
+              required
+            >
+
+            <label for="telefoneCliente">Telefone</label>
+            <input
+              type="tel"
+              id="telefoneCliente"
+              placeholder="(00) 00000-0000"
+              required
+            >
+
+            <label>Como você prefere receber?</label>
+
+            <div class="opcoes-entrega">
+              <label class="opcao-radio">
+                <input
+                  type="radio"
+                  name="tipoEntrega"
+                  value="retirada"
+                  checked
+                >
+                Retirar na loja
+              </label>
+
+              <label class="opcao-radio">
+                <input
+                  type="radio"
+                  name="tipoEntrega"
+                  value="entrega"
+                >
+                Entrega
+              </label>
+            </div>
+
+            <div class="campo-endereco oculto" id="campoEndereco">
+              <label for="enderecoCliente">
+                Endereço de entrega
+              </label>
+
+              <input
+                type="text"
+                id="enderecoCliente"
+                placeholder="Rua, número, bairro"
+              >
+            </div>
+
+            <label for="pagamentoCliente">
+              Forma de pagamento
+            </label>
+
+            <select id="pagamentoCliente">
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Cartão">Cartão</option>
+              <option value="Pix">Pix</option>
+            </select>
+
+            <!-- PAGAMENTO COM CARTÃO -->
+            <div id="opcoesCartao" class="opcoes-pagamento oculto">
+
+              <label>Tipo de cartão</label>
+
+              <div class="opcoes-entrega">
+                <label class="opcao-radio">
+                  <input
+                    type="radio"
+                    name="tipoCartao"
+                    value="Débito"
+                    checked
+                  >
+                  Débito
+                </label>
+
+                <label class="opcao-radio">
+                  <input
+                    type="radio"
+                    name="tipoCartao"
+                    value="Crédito"
+                  >
+                  Crédito
+                </label>
+              </div>
+
+              <label for="numeroCartao">
+                Número do cartão
+              </label>
+
+              <input
+                type="text"
+                id="numeroCartao"
+                placeholder="0000 0000 0000 0000"
+                inputmode="numeric"
+                maxlength="19"
+                autocomplete="cc-number"
+              >
+
+              <label for="nomeCartao">
+                Nome no cartão
+              </label>
+
+              <input
+                type="text"
+                id="nomeCartao"
+                placeholder="Nome como está no cartão"
+                autocomplete="cc-name"
+              >
+
+              <div class="dados-cartao-linha">
+
+                <div>
+                  <label for="validadeCartao">
+                    Validade
+                  </label>
+
+                  <input
+                    type="text"
+                    id="validadeCartao"
+                    placeholder="MM/AA"
+                    maxlength="5"
+                    inputmode="numeric"
+                    autocomplete="cc-exp"
+                  >
+                </div>
+
+                <div>
+                  <label for="cvvCartao">
+                    CVV
+                  </label>
+
+                  <input
+                    type="password"
+                    id="cvvCartao"
+                    placeholder="123"
+                    maxlength="4"
+                    inputmode="numeric"
+                    autocomplete="cc-csc"
+                  >
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- PAGAMENTO COM PIX -->
+            <div id="opcoesPix" class="opcoes-pagamento oculto">
+
+              <label>Pagamento via Pix</label>
+
+              <div class="pix-box">
+
+                <div id="pixQrCode" class="pix-qr-code"></div>
+
+                <p class="pix-chave-titulo">
+                  Chave Pix
+                </p>
+
+                <div class="pix-chave-container">
+
+                  <span id="pixChave"></span>
+
+                  <button
+                    type="button"
+                    id="copiarPix"
+                    class="btn btn-card"
+                  >
+                    Copiar chave
+                  </button>
+
+                </div>
+
+                <small>
+                  Escaneie o QR Code ou copie a chave para realizar o pagamento.
+                </small>
+
+              </div>
+
+            </div>
+
+            <label for="observacaoGeral">
+              Observação geral (opcional)
+            </label>
+
+            <textarea
+              id="observacaoGeral"
+              rows="2"
+              placeholder="Ex: trazer talheres, tocar o interfone..."
+            ></textarea>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-finalizar"
+            >
+              Finalizar pedido
+            </button>
+
+          </form>
+
+          <div id="mensagemPedido" class="mensagem-pedido"></div>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <img
+          src="static/img/logo.png"
+          alt="Café de Cria"
+          class="footer-logo"
+        >
+
+        <p class="footer-name">
+          Café de Cria
+        </p>
+
+        <p class="footer-slogan">
+          Um bom café, uma boa conversa e bons momentos.
+        </p>
+
+      </div>
+
+      <ul class="footer-links">
+        <img
+          src="static/img/instagram.png"
+          alt="Instagram"
+          class="footer-icon"
+        >
+
+        <img
+          src="static/img/facebook.png"
+          alt="Facebook"
+          class="footer-icon"
+        >
+
+        <img
+          src="static/img/whatsapp.png"
+          alt="WhatsApp"
+          class="footer-icon"
+        >
+      </ul>
+
+    </div>
+
+    <p class="footer-copy">
+      &copy; 2026 Café de Cria. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <script src="static/js/script.js"></script>
+
+</body>
+</html>
